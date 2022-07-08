@@ -122,7 +122,7 @@ class SurveyCubit extends Cubit<SurveyState> {
     final cron = Cron();
 
     //setup cron job run every 15 minutes
-    cron.schedule(Schedule.parse('*/2 * * * *'), () async {
+    cron.schedule(Schedule.parse('*/15 * * * *'), () async {
       var isOnline = await SimpleConnectionChecker.isConnectedToInternet();
       emit(
         state.copyWith.call(

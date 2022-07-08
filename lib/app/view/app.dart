@@ -20,6 +20,7 @@ class App extends StatelessWidget {
       create: (BuildContext context) =>
           SurveyCubit(surveyInterface: SurveyRepository()),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),
           colorScheme: ColorScheme.fromSwatch(
